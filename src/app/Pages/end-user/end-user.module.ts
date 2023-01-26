@@ -10,6 +10,7 @@ import { FaqComponent } from './faq/faq.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
   imports: [
     CommonModule,
     MaterialModule,
-    EndUserRoutingModule
+    EndUserRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class EndUserModule { }

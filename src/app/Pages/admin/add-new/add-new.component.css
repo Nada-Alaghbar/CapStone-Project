@@ -1,0 +1,88 @@
+.box{
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.30);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 75vh;
+    width: 60vw;
+    gap: 35px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+.main-btns{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 50px;
+    width: 50vw;
+}
+
+.main-btns button{
+    width: 250px;
+    color: var(--white);
+    font-weight: 500;
+    background-color: var(--blue);
+    border: 0;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.field{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 25px;
+    
+}
+
+label{
+    
+    color: var(--blue);
+    font-weight: 700;
+}
+
+input{
+    background-color: white;
+    height: 25px;
+    width: 250px;
+    outline: none;
+    border: 0;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.30);
+} 
+
+.form-btn{
+  padding: 5px;
+  width: 100px;
+    color: var(--white);
+    font-weight: 500;
+    background-color: var(--blue);
+    border: 0;
+    border-radius: 7px;
+}
+
+.new-sec{
+    display: flex;
+    align-items: baseline;
+    gap: 25px;
+}
+
+.new-st{
+    /* border: 1px solid red; */
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-st button{
+    margin-top: 20px;
+}
+
+.y-n{
+    display: flex;
+    gap: 50px;
+}

@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
     height: 500px;
+    gap: 20px;
 }
 
 .title{
@@ -24,7 +25,7 @@ h3{
 }
 
 .form{
-    background-color: white;
+    /* background-color: white; */
     border-radius: 7px;
     width: 700px;
     height: 300px;
@@ -36,7 +37,7 @@ h3{
 }
 
 .field{
-    background-color: white;
+    /* background-color: white; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,17 +47,17 @@ h3{
 }
 
 label{
-    background-color: white;
+    /* background-color: white; */
     color: var(--blue);
     font-weight: 700;
 }
 
 input{
+    background-color: white;
     height: 25px;
     width: 250px;
     outline: none;
     border: 0;
-    background-color: var(--light-gray);
     box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.30);
 }
 

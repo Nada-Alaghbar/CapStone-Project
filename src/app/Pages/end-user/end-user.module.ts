@@ -11,6 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MaterialModule,
     EndUserRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    AngularFirestoreModule
   ]
 })
 export class EndUserModule { }

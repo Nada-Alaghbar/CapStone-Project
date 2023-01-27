@@ -1,0 +1,174 @@
+.dashboard{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectors{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 25px;
+    width: 75vw;
+    overflow: auto;
+}
+
+button{
+    width: 100px;
+    color: var(--white);
+    font-weight: 500;
+    background-color: var(--blue);
+    border: 0;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.form-btn{
+  padding: 5px;
+}
+.container{
+    /* border: 2px solid blue; */
+    width: 700px;
+    height: 500px;
+      width: 80vw;
+      height: 75vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+ 
+.logos{
+    /* border: 0.5px solid var(--dark-gray); */
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.30);
+    border-radius: 7px;
+    width: 500px;
+    height: 400px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4,75px) ;
+    grid-template-rows: repeat(autofill, 75px) ;
+    overflow: auto;
+    padding: 20px;
+    
+    /* grid-template-columns: repeat(4,75px); */
+    /* grid-template-rows: repeat(5,75px); */
+    gap: 45px;
+    
+    }
+    .logos img{
+        max-height: 75px;
+        max-width: 75px;
+    }
+
+    .data{
+        box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.30);
+        border-radius: 7px;
+        background-color: var(--white);
+        width: 500px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        }
+
+        .allData{
+            background-color: var(--white);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          justify-items: center;
+          gap: 20px;
+          }
+          
+          
+          hr{
+            border: none;
+            width:400px;
+            height: 2px;
+            background: #cecece;
+          }
+
+          .basic{
+            background-color: var(--white);
+            display: flex;
+            justify-content:flex-start;
+            align-items: center;
+            gap: 35px;
+          }
+          
+          .bigLogo{
+            background-color: var(--white);
+            max-height: 120px;
+            max-width: 120px;
+          }
+          
+          .names{
+            background-color: var(--white);
+            padding-top: 15px;
+            height: 95px;
+            display: flex;
+            flex-direction: column;
+            
+          }
+          .sec{
+        background-color: var(--white);
+          display:flex;
+          justify-content: baseline;
+          align-items: baseline;
+          gap: 5px;
+          
+          }
+          .h3{
+            background-color: var(--white);
+            color: var(--blue);
+              font-weight: 700;
+              font-size: 1.5rem;
+              font-family: 'tajawal', sans-serif;
+          }
+          .details{
+            background-color: var(--white);
+            display: flex;
+            flex-direction: column;
+            
+          }
+          p{
+            background-color: var(--white);
+          }
+          .field{
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            gap: 25px;
+            
+        }
+        
+        label{
+            background-color: white;
+            color: var(--blue);
+            font-weight: 700;
+        }
+        
+        input{
+            height: 25px;
+            width: 250px;
+            outline: none;
+            border: 0;
+            background-color: var(--light-gray);
+            box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.30);
+        }          
+
+        .btn-UD{
+            background-color: var(--white);
+            display: flex;
+            gap: 50px;
+        }
+
+        #name, #sector{
+            width: 175px;
+        }

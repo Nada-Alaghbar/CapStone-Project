@@ -5,9 +5,11 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { CrudComponent } from './crud/crud.component';
 
 
+
 @NgModule({
   declarations: [
-    CrudComponent
+    CrudComponent,
+
   ],
   imports: [
     CommonModule,

@@ -1,6 +1,6 @@
 <div class="sec">
 
-<form class="container">
+<form class="container" formGroup='form' (submit)="submit()" >
 
     
         
@@ -10,14 +10,14 @@
 
             <div class="field">
             <label for="email"> Email</label>
-            <input name="email" id="email" type="email"></div>
+            <input name="email" id="email" type="email" required formControlName="email"></div>
 
             <div class="field">
             <label for="pass"> Password</label>
-            <input name="pass" id="pass" type="password"></div>
+            <input name="pass" id="pass" type="password" required formControlName="password"></div>
     </div>
 
-    <button type="submit" >Login</button>
+    <button type="submit">Login</button>
 
   </form>
 

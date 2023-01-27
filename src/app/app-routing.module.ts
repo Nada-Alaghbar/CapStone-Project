@@ -21,8 +21,8 @@ const routes: Routes = [
     (m) => m.AdminModule
 
   )} 
+  
   // ,canActivate:[AuthGuard]
-
   ,{path:'**',component: NotFoundComponent,}
     
 ];

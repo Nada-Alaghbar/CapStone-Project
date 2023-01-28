@@ -1,25 +1,24 @@
 <div class="dashboard">
 
-    <div class="sectors">
+    <div class="sectors" >
+        <button (click)="getAll($event)"> All Sectors</button>
 
-<button> Sector 1</button>
-<button> Sector 2</button>
-<button> Sector 3</button>
-<button> Sector 4</button>
-<button> Sector 5</button>
+<button *ngFor="let sector of sectorsName" (click)="getValue($event)">{{sector.SecName}}</button>
     </div>
 
     <div class="container">
         
 
          <div class="logos">
-            <img alt="logo1"> <img alt="logo"> <img alt="logo"> <img alt="logo"> <img alt="logo1"><img alt="logo1"><img alt="logo1"><img alt="logo1"><img alt="logo1"><img alt="logo1"><img alt="logo1">
+            <div  *ngFor="let startup of startupsInfo" (click)="getData(startup.uid)">
+                <img alt="logo" src="{{startup.logo}}">
+            </div>
         </div>
 
-        <div class="data">
+        <div class="data" *ngIf="startupsData">
             <div class="allData">
                 <div class="basic">
-                <img alt="logo1" class="bigLogo">
+                <img alt="logo1" src="{{startupsData.logo}}" class="bigLogo">
     
                  <div class="names">
     
@@ -64,3 +63,5 @@
 </div>
 <br> <br>
 <app-add-new></app-add-new>
+
+<button (click)="logOut()" class="logout"> Log out </button>

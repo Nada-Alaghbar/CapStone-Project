@@ -16,7 +16,7 @@ html, body { height: 100vh; }
     --white: #ffffff;
     --light-gray: #f8f7f8;
     --dark-gray: #4d4d4d;
-    --syan: #009eff;
+    --cyan: #009eff;
     --blue: #004a79;
 
 }
@@ -24,6 +24,6 @@ html, body { height: 100%; }
 body { margin: 0; font-family: 'Tajawal', sans-serif; }
 
 button:hover{
-    cursor: pointer;
-      }
+cursor: pointer;
+}
 

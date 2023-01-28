@@ -16,9 +16,10 @@
 
 .field{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 20px;
+    gap: 20px;
     
 }
 
@@ -46,7 +47,7 @@ textarea{
 }
 .btn{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     padding: 20px;
 }
@@ -60,4 +61,52 @@ button{
     padding: 10px;
     margin-left: 20px;
     border-radius: 7px;
+}
+
+@media screen and (max-width: 1053px){
+
+    /* .contact{
+        gap: 100px;
+        justify-content: space-around;
+    } */
+    
+
+.field{
+gap: 10px;
+}
+
+input, textarea{
+    width: 150px;
+}
+
+}
+
+
+@media screen and (max-width: 780px){
+    .contact{
+        margin-top: 175px;
+        gap: 100px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 120px;
+    }
+
+    .form{
+        width: 350px;
+        gap: 10px;
+    }
+    .field{
+        justify-content: space-between;
+        }
+        input, textarea{
+            width: 100px;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+        }
+    img{
+        max-width: 200px;
+    }
 }

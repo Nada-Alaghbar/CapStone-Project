@@ -14,3 +14,26 @@
 img{
     height: 40px; 
 }
+
+@media screen and (max-width: 750px){
+    .header{
+    gap: 40px;
+    }
+
+}
+
+@media screen and (max-width: 560px){
+    .header{
+    gap: 20px;
+    }
+
+}
+
+@media screen and (max-width: 445px){
+    .header{
+    gap: 10px;
+    }
+    img{
+        height: 20px; 
+    }
+}

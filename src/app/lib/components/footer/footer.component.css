@@ -12,3 +12,17 @@ p {
   margin-bottom: 0;
 
 }
+
+@media screen and (max-width: 450px){
+p{
+  width: 100vw;
+  background-color: var(--blue);
+  font-size: small;
+}
+}
+
+@media screen and (max-width: 320px){
+  p{
+    font-size: smaller;
+  }
+  }

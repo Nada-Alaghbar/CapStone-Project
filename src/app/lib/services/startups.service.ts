@@ -8,7 +8,7 @@ import { startups } from '../interFaces/startUps';
   providedIn: 'root'
 })
 export class StartupsService {
-   startupCollection!: AngularFirestoreCollection<startups>;
+  startupCollection!: AngularFirestoreCollection<startups>;
   
   
   constructor(private startUps: AngularFirestore) {
@@ -22,6 +22,7 @@ export class StartupsService {
   getStartupById(id: string) {
 
     return this.startupCollection.doc(id).valueChanges();
-
   }
+
+  getStartupsFilter(sectorF: string): Observable<startups[]>{return this.startUps.collection<startups>('dataTest', ref => ref.where('sector', '==', sectorF )).valueChanges({"idField":'uid'});}
 }

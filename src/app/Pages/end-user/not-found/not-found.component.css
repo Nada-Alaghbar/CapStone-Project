@@ -9,9 +9,9 @@
 }
 
 .text{
-   display: flex; 
-   flex-direction: column;
-   justify-content: center;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
     align-items:center;
     gap: 20px;
 }
@@ -33,3 +33,36 @@ button{
     margin-left: 20px;
     border-radius: 7px;
 }
+
+@media screen and (max-width: 750px){
+
+    .non{
+      gap: 30px;
+    }
+  h1{
+      font-size:1.5rem
+  }
+  .p{
+      width: 350px; 
+  }
+  img{
+      max-width: 200px;
+  }
+  }
+  
+  @media screen and (max-width: 560px){
+  
+      .non{
+          display: flex;
+          flex-direction: column;
+          gap: 50px;
+          margin-bottom: 50px;
+      }
+  
+    .p{
+        width: 300px; 
+    }
+    img{
+        max-width: 200px;
+    }
+  }

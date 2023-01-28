@@ -133,16 +133,12 @@ section{
 }
 
 .container{
-  /* border: 2px solid blue; */
-  width: 700px;
-  height: 500px;
-    width: 80vw;
-    height: 75vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-
+  width: 80vw;
+  height: 75vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 .logos{
@@ -150,18 +146,15 @@ section{
 box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.30);
 background-color: var(--white);
 border-radius: 7px;
-width: 500px;
-height: 375px;
+width: 40vw;
+height: 60vh;
 display: grid;
 justify-content: center;
 align-items: center;
-grid-template-columns: repeat(4,75px) ;
+grid-template-columns: repeat(4,1fr) ;
 grid-template-rows: repeat(autofill, 75px) ;
 overflow: auto;
 padding: 20px;
-
-/* grid-template-columns: repeat(4,75px); */
-/* grid-template-rows: repeat(5,75px); */
 gap: 45px;
 
 }
@@ -179,6 +172,7 @@ border-radius: 7px;
 background-color: var(--white);
 width: 500px;
 height: 350px;
+width: 35vw;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -186,7 +180,7 @@ align-items: center;
 }
 
 .allData{
-  background-color: var(--white);
+background-color: var(--white);
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -197,7 +191,7 @@ gap: 35px;
 
 hr{
   border: none;
-  width:400px;
+  width: 30vw;
   height: 2px;
   background: #cecece;
 }
@@ -264,7 +258,7 @@ a{
 .info{
   background-color: var(--white);
   display: flex;
-  width: 350px;
+  width: 30vw;
   gap: 10px;
 }
 
@@ -276,4 +270,60 @@ p{
   background-color: var(--white);
 }
 
+@media screen and (max-width: 1150px){
 
+  .logos{
+    grid-template-columns: repeat(3, 1fr);
+  }
+.none{
+  width: 30vw;
+  /* border: 1px solid red; */
+}
+.none hr{
+  width: 30vw;
+}
+.data{
+  padding: 25px;}
+
+/* .basic{
+  width: 30vw;
+  height: 150px;
+  border: 1px solid red;
+} */
+} 
+
+@media screen and (max-width: 950px){
+
+  .logos{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .data{
+    /* gap: 5px; */
+    padding: 10px;
+  }
+  .bigLogo{
+    max-height: 75px;
+    max-width: 75px;
+  }
+
+}
+@media screen and (max-width: 750px){
+
+  .logos{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .data{
+    gap: 10px;
+  }
+  .data,.basic{
+    flex-direction: column;
+  }
+  .basic{
+    gap: 5px;
+  }
+
+  .info p,a{
+    font-size: 1rem;
+    width: auto;
+  }
+}

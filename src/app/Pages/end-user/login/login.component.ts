@@ -18,9 +18,12 @@ export class LoginComponent {
 
     }
     submit(){
+      console.log('submit');
       this.LoginService.signIn(
         this.form.get('email')?.value+'',
         this.form.get('password')?.value+''
+        
+
       ).then((user)=> {
         //navigate to admin/
         console.log(user);
@@ -28,7 +31,8 @@ export class LoginComponent {
 
        
       }).catch((error)=> {
-        alert ("ERROR")
+        alert ("Incorrect Email or Password, Try agin")
+        console.log(error);
       });
     }
 }

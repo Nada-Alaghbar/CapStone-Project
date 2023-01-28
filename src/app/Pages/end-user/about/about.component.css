@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     height: 500px;
-    gap: 200px;
+    gap: 100px;
     margin-top: 75px;
 }
 
@@ -21,4 +21,37 @@ h1{
     font-weight: 500;
     font-size: medium;
 
+}
+
+@media screen and (max-width: 910px){
+
+  .about{
+    gap: 30px;
+  }
+h1{
+    font-size:1.5rem
+}
+.p{
+    width: 350px; 
+}
+img{
+    max-width: 300px;
+}
+}
+
+@media screen and (max-width: 750px){
+
+    .about{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin-bottom: 50px;
+    }
+
+  .p{
+      width: 300px; 
+  }
+  img{
+      max-width: 200px;
+  }
 }

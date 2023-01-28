@@ -12,6 +12,7 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     FaqComponent,
     DashboardComponent,
     UserFormComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,

@@ -27,13 +27,17 @@ overflow: auto;
 
 .form-btn{
 padding: 5px;
+width: 100px;
+  color: var(--white);
+  font-weight: 500;
+  background-color: var(--blue);
+  border: 0;
+  border-radius: 7px;
 }
 .container{
 /* border: 2px solid blue; */
-width: 700px;
-height: 500px;
 width: 80vw;
-height: 75vh;
+height: 80vh;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -44,13 +48,13 @@ align-items: center;
 background-color: var(--white);
 box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.30);
 border-radius: 7px;
-width: 500px;
-height: 400px;
+width: 40vw;
+height: 65vh;
 display: grid;
 justify-content: center;
 align-items: center;
-grid-template-columns: repeat(4,75px) ;
-grid-template-rows: repeat(autofill, 75px) ;
+grid-template-columns: repeat(4,1fr) ;
+grid-template-rows: repeat(autofill, 1fr) ;
 overflow: auto;
 padding: 20px;
 gap: 45px;    
@@ -66,8 +70,8 @@ max-width: 75px;
 box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.30);
 border-radius: 7px;
 background-color: var(--white);
-width: 500px;
-height: 400px;
+height: 65vh;
+width: 35vw;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -78,6 +82,7 @@ gap: 20px;
 .allData{
 background-color: var(--white);
 display: flex;
+width: 35vw;
 flex-direction: column;
 justify-content: center;
 justify-items: center;
@@ -95,9 +100,9 @@ background: #cecece;
 .basic{
 background-color: var(--white);
 display: flex;
-justify-content:flex-start;
+justify-content:center;
 align-items: center;
-gap: 35px;
+gap: 20px;
 }
           
 .bigLogo{
@@ -184,3 +189,48 @@ border-radius: 7px;
 margin-bottom: 20px;
 background-color: var(--dark-gray);
 }
+
+@media screen and (max-width: 1150px){
+
+    .logos{
+      grid-template-columns: repeat(3, 1fr);
+    }
+.allData input{
+width: 150px;
+}
+  } 
+  
+  /* @media screen and (max-width: 950px){
+  
+    .logos{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .data{
+      padding: 10px;
+    }
+    .bigLogo{
+      max-height: 75px;
+      max-width: 75px;
+    }
+  
+  }
+  @media screen and (max-width: 750px){
+  
+    .logos{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .data{
+      gap: 10px;
+    }
+    .data,.basic{
+      flex-direction: column;
+    }
+    .basic{
+      gap: 5px;
+    }
+  
+    .info p,a{
+      font-size: 1rem;
+      width: auto;
+    }
+  } */

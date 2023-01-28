@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
     height: 80vh;
 }
 
@@ -66,4 +65,25 @@ label{
     align-items: center;
     padding: 10px;
     
+}
+
+@media screen and (max-width: 560px){
+    .box{
+        width: 75vw;
+        padding: 30px;
+    }
+    input{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    input{
+        width: 150px;
+    } 
+}
+@media screen and (max-width: 417px){
+    input{
+        width: 100px;
+    } 
 }

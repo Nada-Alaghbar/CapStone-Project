@@ -152,7 +152,7 @@ display: grid;
 justify-content: center;
 align-items: center;
 grid-template-columns: repeat(4,1fr) ;
-grid-template-rows: repeat(autofill, 75px) ;
+grid-template-rows: repeat(autofill, 1fr) ;
 overflow: auto;
 padding: 20px;
 gap: 45px;

@@ -16,43 +16,44 @@
                     <button class="form-btn"> Add</button>
             </form> -->
 
-           <div class="new-st">
+           <form class="new-st" #form="ngForm" (ngSubmit)="add(form.value)">
 
-                <form>
+                <div>
                 <div class="field">
 
-                    <label for="name"> Startup Name</label>
-                    <input name="name" id="name" type="text" required>
+                    <label for="companyName"> Startup Name</label>
+                    <input #comName="ngModel"                
+                     [(ngModel)]="startupsData.companyName" name="companyName" id="companyName" type="text" required>
                 </div>
 
                 <div class="field">
-                    <label for="sec-n"> Sector Name</label>
-                    <input name="sec-n" id="sec-n" type="text" required>
+                    <label for="sector"> Sector Name</label>
+                    <input #secName="ngModel" [(ngModel)]="startupsData.sector" name="sector" id="sector" type="text" required>
                 </div>
 
                 <div class="field">
                     <label for="phone"> Phone Number</label>
-                    <input name="phone" id="phone" type="text" required>
+                    <input #phone="ngModel" [(ngModel)]="startupsData.phone" name="phone" id="phone" type="text" required>
                 </div>
 
                 <div class="field">
                     <label for="email"> Email</label>
-                    <input name="email" id="email" type="email" required>
+                    <input #email="ngModel" [(ngModel)]="startupsData.email" name="email" id="email" type="email" required>
                 </div>
 
                 <div class="field">
-                    <label for="website"> Website</label>
-                    <input name="website" id="website" type="text" required>
+                    <label for="webSite"> Website</label>
+                    <input #webSite="ngModel" [(ngModel)]="startupsData.webSite" name="webSite" id="webSite" type="text" required>
                 </div>
 
                 <div class="field">
                     <label for="logo"> Upload Logo</label>
-                    <input name="logo" id="logo" type="file" required>
+                    <input accept="image/*" (change)="upload($event)" name="logo" id="logo" type="file" required>
                 </div>
-            </form>
+            </div>
                 <button class="form-btn"> Add</button>
 
-            </div>
+            </form>
 
             <!-- <div class="req">
 

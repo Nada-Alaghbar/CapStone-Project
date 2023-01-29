@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { sectors } from 'src/app/lib/interFaces/sectors';
 import { SectorsService } from 'src/app/lib/services/sectors.service';
 import { StartupsService } from 'src/app/lib/services/startups.service';
+import { StorageService } from 'src/app/lib/services/storage.service';
 
 @Component({
   selector: 'app-crud',
@@ -15,10 +16,13 @@ export class CrudComponent implements OnInit {
   startupsData: any;
   sectorsName:any;
   valueSec:any;
+  imgURL?:string;
+  hide?:boolean=false;
+  id:any;
 
-    constructor (private startupService:StartupsService,private fireAuth: AngularFireAuth,private router: Router, private sector:SectorsService
+    constructor (private startupService:StartupsService,private fireAuth: AngularFireAuth,private router: Router, private sector:SectorsService, private storageServices:StorageService
       
-      
+
       
       ) {
   
@@ -30,12 +34,15 @@ export class CrudComponent implements OnInit {
   getInfo(){
     this.startupService.getStartups().subscribe((Response)=>{
       this.startupsInfo=Response;
+         
     })
   }
   
   getData(id:any){
     this.startupService.getStartupById(id).subscribe((Response)=>{
       this.startupsData=Response;
+      this.id=id;
+
     })
   }
   getNameSectors(){
@@ -55,4 +62,16 @@ this.startupsInfo=this.startupService.getStartupsFilter(this.valueSec).subscribe
     this.valueSec=event.target.innerText;
     if (this.valueSec== 'All Sectors') { this.startupsInfo = this.startupService.getStartups().subscribe((response) => {this.startupsInfo = response;console.log(this.startupsInfo);});}
   }
+
+  upload(event: Event) { 
+    let file = (event.target as HTMLInputElement)?.files?.[0];if (file) {this.storageServices.uploadimage(file).subscribe((value) => {
+    this.imgURL = value;this.hide = true;});} }
+
+
+    Update(data:any){
+      console.log(this.id,data)
+      if(this.imgURL){this.startupService.updateStartup(this.id,{...data,logo:this.imgURL})} 
+      else{this.startupService.updateStartup(this.id,{...data,logo:this.startupsData.logo})}
+
+    }
 }

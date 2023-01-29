@@ -84,15 +84,14 @@ background-color: var(--white);
 display: flex;
 width: 35vw;
 flex-direction: column;
-justify-content: center;
-justify-items: center;
+align-items: center; 
 gap: 20px;
 }
           
           
 hr{
 border: none;
-width:450px;
+width:400px;
 height: 2px;
 background: #cecece;
 }
@@ -110,13 +109,16 @@ background-color: var(--white);
 max-height: 75px;
 max-width: 100px;
 }
-          
+.hide{
+display: none;
+}     
+     
 .names{
 background-color: var(--white);
 padding-top: 15px;
 height: 95px;
 display: flex;
-flex-direction: column;         
+flex-direction: column;        
 }
 
 .sec{
@@ -153,7 +155,8 @@ align-items: center;
 padding: 10px;
 gap: 25px;
 }
-        
+
+
 label{
 background-color: white;
 color: var(--blue);
@@ -195,26 +198,52 @@ background-color: var(--dark-gray);
     .logos{
       grid-template-columns: repeat(3, 1fr);
     }
-.allData input{
+.allData input, #name, #sector{
 width: 150px;
+}
+hr{
+  width:350px ;
 }
   } 
   
-  /* @media screen and (max-width: 950px){
+@media screen and (max-width: 1025px){
   
-    .logos{
-      grid-template-columns: repeat(2, 1fr);
+  .logos{
+  grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bigLogo{
+  max-width: 75px;
+  max-height: 75px;
+  }
+  
+  hr{
+  width:300px ;
+  }
+
+  .basic{
+  flex-direction: column;
+  gap: 10px;
+  justify-content:space-evenly;
+  }
+ 
+  .allData input, #name, #sector{
+  width: 100px;
+  }
+
+  .field{
+  padding: 5px;
+  }
+    .allData{
+      justify-content:space-evenly;
+      gap: 10px;
     }
     .data{
-      padding: 10px;
+      justify-content:space-evenly;
+      gap: 10px;
     }
-    .bigLogo{
-      max-height: 75px;
-      max-width: 75px;
-    }
-  
   }
-  @media screen and (max-width: 750px){
+    /* @media screen and (max-width: 750px){
   
     .logos{
       grid-template-columns: repeat(1, 1fr);

@@ -15,50 +15,51 @@
             </div>
         </div>
 
-        <div class="data" *ngIf="startupsData">
+        <form class="data" *ngIf="startupsData" #form="ngForm" (ngSubmit)="Update(form.value)">
             <div class="allData">
                 <div class="basic">
-                <img alt="logo" src="{{startupsData.logo}}" class="bigLogo">
+                <img alt="logo" *ngIf="startupsData.logo" [class.hide]="hide" src="{{startupsData.logo}}" class="bigLogo">
+                <img alt="logo" *ngIf="imgURL" src="{{imgURL}}" class="bigLogo">
     
-                 <div class="names">
+                 <div class="names" >
     
                     <div class="field">
-                        <label for="name"> Company Name</label>
-                        <input name="name" id="name" type="text" required></div>
+                        <label for="companyName"> Name</label>
+                        <input [(ngModel)]="startupsData.companyName" name="companyName" id="companyName" type="text" required></div>
     
                    <div class="field">
                     <label for="sector"> Sector</label>
-                    <input name="sector" id="sector" type="text" required></div>
+                    <input [(ngModel)]="startupsData.sector" name="sector" id="sector" type="text" required></div>
                 
                  </div> 
                 </div>
                 <hr>
-                <form class="details"> 
+                <div class="details"> 
 
                     <div class="field">
                         <label for="phone"> Phone Number</label>
-                        <input name="phone" id="phone" type="text" required></div>
+                        <input [(ngModel)]="startupsData.phone" name="phone" id="phone" type="text" required></div>
 
                         <div class="field">
                             <label for="email"> Email</label>
-                            <input name="email" id="email" type="email" required></div>
+                            <input [(ngModel)]="startupsData.email" name="email" id="email" type="email" required></div>
 
                     <div class="field">
-                        <label for="website"> Website</label>
-                        <input name="website" id="website" type="text" required></div>
+                        <label for="webSite"> Website</label>
+                        <input [(ngModel)]="startupsData.webSite" name="webSite" id="webSite" type="text" required></div>
 
                         <div class="field">
                             <label for="upload"> Upload Logo</label>
-                            <input name="upload" id="upload" type="file" required></div>
-                </form>
+                            <input name="upload" accept="image/*" (change)="upload($event)" id="upload" type="file" required></div>
+                </div>
                 
         </div>
         <div class="btn-UD">
-            <button class="form-btn"> Update</button>
+            <button class="form-btn" type="submit"> Update</button>
             <button class="form-btn"> Delete</button>
         </div>
     
-</div>
+</form>
 
 </div>
 <br> <br>

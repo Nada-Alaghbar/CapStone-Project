@@ -270,7 +270,7 @@ p{
   background-color: var(--white);
 }
 
-@media screen and (max-width: 1150px){
+@media screen and (max-width: 1155px){
 
   .logos{
     grid-template-columns: repeat(3, 1fr);
@@ -305,6 +305,10 @@ p{
     max-height: 75px;
     max-width: 75px;
   }
+  .basic{
+    flex-direction: column;
+    gap: 5px;
+}
 
 }
 @media screen and (max-width: 750px){

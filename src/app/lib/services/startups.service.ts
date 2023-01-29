@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+import { from } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
 import { startups } from '../interFaces/startUps';
 
@@ -25,4 +26,15 @@ export class StartupsService {
   }
 
   getStartupsFilter(sectorF: string): Observable<startups[]>{return this.startUps.collection<startups>('dataTest', ref => ref.where('sector', '==', sectorF )).valueChanges({"idField":'uid'});}
+
+  updateStartup(id: string, startup: startups) {
+    console.log(startup,id)
+    return from(this.startupCollection.doc(id).update({ ...startup}));}
+
+    addST(startup:startups){
+      let addedStartup = this.startupCollection?.add(startup);
+      return from(addedStartup);
+
+
+    }
 }

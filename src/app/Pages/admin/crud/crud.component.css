@@ -218,7 +218,7 @@ hr{
   }
   
   hr{
-  width:300px ;
+  width:250px ;
   }
 
   .basic{
@@ -227,7 +227,7 @@ hr{
   justify-content:space-evenly;
   }
  
-  .allData input, #name, #sector{
+  .allData input, #name, #sec{
   width: 100px;
   }
 
@@ -243,23 +243,3 @@ hr{
       gap: 10px;
     }
   }
-    /* @media screen and (max-width: 750px){
-  
-    .logos{
-      grid-template-columns: repeat(1, 1fr);
-    }
-    .data{
-      gap: 10px;
-    }
-    .data,.basic{
-      flex-direction: column;
-    }
-    .basic{
-      gap: 5px;
-    }
-  
-    .info p,a{
-      font-size: 1rem;
-      width: auto;
-    }
-  } */

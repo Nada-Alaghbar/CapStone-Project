@@ -34,7 +34,7 @@ export class StartupsService {
     addST(startup:startups){
       let addedStartup = this.startupCollection?.add(startup);
       return from(addedStartup);
-
-
     }
+
+    deleteStartup(id: string) { return from(this.startupCollection.doc(id).delete()); }
 }

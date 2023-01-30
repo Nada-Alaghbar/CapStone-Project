@@ -5,15 +5,16 @@
     justify-content: space-between;
     align-items: center;
     height: 75vh;
-    width: 60vw;
+    width: 80vw;
     border-radius: 7px;
     padding: 30px;
     /* gap: 30px; */
     /* margin-bottom: 20px; */
+    /* padding: 50px; */
 }
 
 .req{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 55vh;
     display: flex;
     flex-direction: column;
@@ -97,7 +98,7 @@ hr{
     background: #cecece;
 }
 .new-st{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 55vh;
     display: flex;
     flex-direction: column;
@@ -114,10 +115,14 @@ hr{
     gap: 50px;
 }
 
+.img{
+    /* border: 1px solid red; */
+    height: 75px;
+}
   @media screen and (max-width: 990px){
     
     .new-sec .field{
-        border: 1px solid red;
+        /* border: 1px solid red; */
         flex-direction: column;
         justify-content: center;
         align-items: center;

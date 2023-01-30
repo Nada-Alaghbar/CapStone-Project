@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<div class="container" *ngIf="!(startupsInfo.length==0)">
+        
+
+    <div class="logos">
+       <div  *ngFor="let startup of startupsInfo" (click)="getData(startup.uid)">
+           <img alt="logo" src="{{startup.logo}}">
+       </div>
+   </div>
+
+   <div class="data" *ngIf="startupsData">
+        
+    <div class="allData">
+        <div class="basic">
+        <img alt="logo1" src="{{startupsData.logo}}" class="bigLogo">
+
+         <div class="names">
+
+            <p class="h3"> {{startupsData.companyName}} </p>
+
+           <div class="sec">    <p class="h4"> Sector:</p> <p>{{startupsData.sector}}</p>     </div>
+        
+         </div> 
+        </div>
+        <hr>
+        <div class="details">
+
+        <div class="info">
+            <span class="material-symbols-outlined" id="icons">
+                phone_iphone </span>
+                <p> {{startupsData.phone}}</p>
+            </div>
+
+            <div class="info">
+                <span class="material-symbols-outlined" id="icons">
+                    forward_to_inbox </span>
+                    <a href="mailto:{{startupsData.email}}"> {{startupsData.email}}</a>
+                </div>
+
+                <div class="info">
+                    <span class="material-symbols-outlined" id="icons">
+                        language </span>
+                        <a href="{{startupsData.webSite}}" target="_blank"> {{startupsData.webSite}}</a>
+                    </div>
+        </div>
+    </div>
+</div>
+<div class="btn">
+    <button (click)="Accept()" type="submit"> Accept</button>
+    <button (click)="delST()" type="reset"> Delete</button>
+    </div>
+</div>
+
+<div *ngIf="(startupsInfo.length==0)" class="none">
+    <h3> There are no new REq.</h3>
+    <hr>
+</div>

@@ -1,11 +1,11 @@
 <div class="box">
     <div class="title">
         <h3>Send a request to add new startup</h3>
-        <button type="submit"> Send</button>
+        <!-- <button type="submit"> Send</button> -->
     </div>
 
-    <div class="form">
-        <form>
+     <div class="form">
+        <!--<form>
 
             <div class="field">
             <label for="name"> Startup Commercial Name</label>
@@ -31,6 +31,44 @@
             <label for="upload"> Upload Logo</label>
             <input name="upload" id="upload" type="file" required></div>
 
+        </form> -->
+        <form class="new-st" #form="ngForm" (ngSubmit)="add(form.value)">
+
+            <div>
+            <div class="field">
+    
+                <label for="companyName"> Startup Name</label>
+                <input #comName="ngModel"                
+                 [(ngModel)]="startupsData.companyName" name="companyName" id="companyName" type="text" required>
+            </div>
+    
+            <div class="field">
+                <label for="sector"> Sector Name</label>
+                <input #secName="ngModel" [(ngModel)]="startupsData.sector" name="sector" id="sector" type="text" required>
+            </div>
+    
+            <div class="field">
+                <label for="phone"> Phone Number</label>
+                <input #phone="ngModel" [(ngModel)]="startupsData.phone" name="phone" id="phone" type="text" required>
+            </div>
+    
+            <div class="field">
+                <label for="email"> Email</label>
+                <input #email="ngModel" [(ngModel)]="startupsData.email" name="email" id="email" type="email" required>
+            </div>
+    
+            <div class="field">
+                <label for="webSite"> Website</label>
+                <input #webSite="ngModel" [(ngModel)]="startupsData.webSite" name="webSite" id="webSite" type="text" required>
+            </div>
+    
+            <div class="field">
+                <label for="logo"> Upload Logo</label>
+                <input accept="image/*" (change)="upload($event)" name="logo" id="logo" type="file" required>
+            </div>
+        </div>
+            <button class="form-btn"> Send</button>
+    
         </form>
     </div>
 </div>

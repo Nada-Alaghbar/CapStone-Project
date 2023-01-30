@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
-import { Observable } from 'rxjs';
+import { from, Observable } from 'rxjs';
 import { sectors } from '../interFaces/sectors';
 
 @Injectable({
@@ -18,9 +18,5 @@ export class SectorsService {
     return this.sectorsCollection.valueChanges({"idField":'uid'});
   
   }
-  // getStartupById(id: string) {
-
-  //   return this.sectorsCollection.doc(id).valueChanges();
-
-  // }
+  addSector(sector: sectors) {let addSector = this.sectorsCollection?.add(sector);return from(addSector); }
 }

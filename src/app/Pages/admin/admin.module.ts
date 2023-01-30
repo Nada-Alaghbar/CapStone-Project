@@ -5,6 +5,7 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { CrudComponent } from './crud/crud.component';
 import { AddNewComponent } from './add-new/add-new.component';
 import { FormsModule } from '@angular/forms';
+import { RequestsComponent } from './requests/requests.component';
 
 
 
@@ -12,6 +13,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     CrudComponent,
     AddNewComponent,
+    RequestsComponent,
 
   ],
   imports: [

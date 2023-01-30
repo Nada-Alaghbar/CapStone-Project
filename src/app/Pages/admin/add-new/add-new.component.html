@@ -2,21 +2,21 @@
 
     <div class="main-btns">
 
-        <button> Add New Sector</button>
-        <button> Add New Startup</button>
-        <button class="Req-btn"> Requests </button>
+        <button (click)="viewSec()"> Add New Sector</button>
+        <button (click)="viewST()"> Add New Startup</button>
+        <button class="Req-btn" (click)="viewReq()"> Requests </button>
             </div>
         
-            <!-- <form class="new-sec">
+            <form *ngIf="viewSector" class="new-sec" #form="ngForm" (ngSubmit)="submit()">
 
                 <div class="field">
                     <label for="sec"> Sector Name</label>
-                    <input name="sec" id="sec" type="text" required>
+                    <input [(ngModel)]="sectorData.SecName" name="sec" id="sec" type="text" required>
 
                     <button class="form-btn"> Add</button></div>
-            </form> -->
+            </form>
 
-           <!-- <form class="new-st" #form="ngForm" (ngSubmit)="add(form.value)">
+           <form *ngIf="viewStartup" class="new-st" #form="ngForm" (ngSubmit)="add(form.value)">
 
                 <div>
                 <div class="field">
@@ -53,13 +53,16 @@
             </div>
                 <button class="form-btn"> Add</button>
 
-            </form> -->
+            </form>
 
-            <!-- <div class="req">
+            <div *ngIf="viewRequest" class="req">
+                <!-- <div class="img">
+                    <img alt="logo">
+                </div>
 
-                <form>
-                <div class="field">
+                <form #form="ngForm" (ngSubmit)="Update(form.value)">
 
+               <div class="field">
                     <label for="name"> Startup Name</label>
                     <input name="name" id="name" type="text" required>
                 </div>
@@ -84,20 +87,16 @@
                     <input name="website" id="website" type="text" required>
                 </div>
 
-                <div class="field">
-                    <label for="logo"> Upload Logo</label>
-                    <input name="logo" id="logo" type="file" required>
-                </div>
             </form>
             <div class="y-n">
                 <button class="form-btn"> Accept</button>
                 <button class="form-btn"> Delete</button>
+            </div> -->
+<app-requests></app-requests>
             </div>
 
-            </div> -->
-
-            <!-- <div class="none">
+            <div *ngIf="(!viewSector && !viewStartup && !viewRequest)" class="none">
                 <h3> Choose a button to Edit</h3>
                 <hr>
-            </div> -->
+            </div>
 </div>

@@ -69,9 +69,13 @@ this.startupsInfo=this.startupService.getStartupsFilter(this.valueSec).subscribe
 
 
     Update(data:any){
-      console.log(this.id,data)
       if(this.imgURL){this.startupService.updateStartup(this.id,{...data,logo:this.imgURL})} 
       else{this.startupService.updateStartup(this.id,{...data,logo:this.startupsData.logo})}
+    }
+
+    delST(){
+      this.startupService.deleteStartup(this.id)
 
     }
+
 }

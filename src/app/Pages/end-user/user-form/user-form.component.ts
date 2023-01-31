@@ -16,7 +16,7 @@ export class UserFormComponent {
   constructor(private RequestService:RequestService,private storageServices:StorageService){}
 
   add(data:any){
- this.RequestService.addRQ({...this.startupsData,logo:this.imgURL}).subscribe(()=>{alert("Done");window.location.reload()})
+ this.RequestService.addRQ({...this.startupsData,logo:this.imgURL}).subscribe(()=>{alert("The request has been sent successfully");window.location.reload()})
 }
 
 upload(event: Event) { 

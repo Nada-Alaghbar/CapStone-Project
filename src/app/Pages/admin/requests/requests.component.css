@@ -26,22 +26,23 @@
     }
     
     .form-btn{
-    padding: 5px;
     width: 100px;
-      color: var(--white);
-      font-weight: 500;
-      background-color: var(--blue);
-      border: 0;
-      border-radius: 7px;
+    color: var(--white);
+    font-weight: 500;
+    background-color: var(--blue);
+    border: 0;
+    border-radius: 7px;
     }
+
     .container{
     /* border: 2px solid blue; */
     width: 80vw;
     height: 60vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
+gap: 25px;
+    padding: 30px;
     }
      
     .logos{
@@ -49,12 +50,12 @@
     background-color: var(--white);
     box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.30);
     border-radius: 7px;
-    width: 30vw;
-    height: 50vh;
+    width: 20vw;
+    height: 40vh;
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(3,1fr) ;
+    grid-template-columns: repeat(2,1fr) ;
     grid-template-rows: repeat(autofill, 1fr) ;
     overflow: auto;
     padding: 20px;
@@ -71,9 +72,8 @@
         box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.30);
         border-radius: 7px;
         background-color: var(--white);
-        width: 500px;
-        height: 350px;
-        width: 35vw;
+        width: 30vw;
+        height: 40vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -85,14 +85,14 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        justify-items: center;
-        gap: 35px;
+        align-items: center;
+        gap: 15px;
         }
         
         
         hr{
           border: none;
-          width: 30vw;
+          width: 25vw;
           height: 2px;
           background: #cecece;
         }
@@ -100,15 +100,15 @@
         .basic{
           background-color: var(--white);
           display: flex;
-          justify-content:flex-start;
+          justify-content:center;
           align-items: center;
           gap: 35px;
         }
         
         .bigLogo{
           background-color: var(--white);
-          max-height: 120px;
-          max-width: 120px;
+          max-height: 100px;
+          max-width: 100px;
         }
         
         .names{
@@ -152,14 +152,16 @@
           background-color: var(--white);
           display: flex;
           flex-direction: column;
-          gap: 7px;
+          justify-content:center;
+          align-items: center;
+          gap: 10px;
         }
         
         
         .info{
           background-color: var(--white);
           display: flex;
-          width: 30vw;
+          width: 25vw;
           gap: 10px;
         }
         
@@ -173,9 +175,10 @@
     
         .btn{
           display: flex;
-          justify-content: flex-end;
-          align-items: center;
-          padding: 20px;
+          /* justify-content: flex-start;
+          align-items: center; */
+          /* padding: 20px; */
+          gap: 20px;
       }
       
       button{
@@ -185,34 +188,78 @@
           background-color: var(--blue);
           border: 0;
           padding: 10px;
-          margin-left: 20px;
           border-radius: 7px;
       }
-    @media screen and (max-width: 1150px){
-    
-        .logos{
-          grid-template-columns: repeat(3, 1fr);
-        }
-    .allData input, #name, #sector{
-    width: 150px;
+.none{
+      height: 55vh;
+      width: 30vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
-    hr{
-      width:350px ;
-    }
-      } 
-      
+
+  
     @media screen and (max-width: 1025px){
+
+      .container{
+        flex-direction: column;
+      }
       
       .logos{
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      width: 60vw;
+    height: 35vh;
+
       }
     
-      .bigLogo{
+      .data{
+        /* border: 1px solid red; */
+        width: 60vw;
+        height: 25vh;
+        align-items:center;
+        
+        padding: 10px;
+      }
+      
+      .allData{
+        flex-direction: row;
+        align-items: center;
+        gap: 35px;
+      }
+      
+      .basic{
+        background-color: var(--white);
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        gap: 7px;
+      }
+      
+      .names{
+        background-color: var(--white);
+        /* padding-top: 15px; */
+        height: 75px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        
+      }
+      
+      .allData hr{
+      width: 2px;
+      height: 20vh;
+      }
+
+     .bigLogo{
       max-width: 75px;
       max-height: 75px;
       }
       
-      hr{
+        /*hr{
       width:250px ;
       }
     
@@ -236,5 +283,5 @@
         .data{
           justify-content:space-evenly;
           gap: 10px;
-        }
+        } */
       }

@@ -28,7 +28,7 @@ viewRequest:boolean=false;
     this.imgURL = value;this.hide = true;});} }
 
     add(data:any){
-this.startupService.addST({...this.startupsData,logo:this.imgURL}).subscribe(()=>{alert("Done");window.location.reload()})
+this.startupService.addST({...this.startupsData,logo:this.imgURL}).subscribe(()=>{alert("New Startup has been added successfully");window.location.reload()})
 
     }
     submit() {this.sectorservice .addSector({...this.sectorData} as sectors) .subscribe((_) =>window.location.reload()); }

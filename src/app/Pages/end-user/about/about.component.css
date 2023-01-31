@@ -1,11 +1,11 @@
 .about{
     display: flex;
-    padding: 50px;
+    /* padding: 50px; */
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 50vw;
     gap: 100px;
-    margin-top: 75px;
+    margin-top: 200px;
 }
 
 h1{
@@ -25,33 +25,9 @@ h1{
 
 @media screen and (max-width: 910px){
 
-  .about{
-    gap: 30px;
-  }
-h1{
-    font-size:1.5rem
-}
-.p{
-    width: 350px; 
-}
-img{
-    max-width: 300px;
-}
-}
-
-@media screen and (max-width: 750px){
-
     .about{
         display: flex;
-        flex-direction: column;
-        gap: 50px;
-        margin-bottom: 50px;
+        flex-direction: column-reverse;
+        gap: 75px;
     }
-
-  .p{
-      width: 300px; 
-  }
-  img{
-      max-width: 200px;
-  }
 }

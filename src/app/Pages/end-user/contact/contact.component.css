@@ -85,11 +85,11 @@ input, textarea{
 @media screen and (max-width: 780px){
     .contact{
         margin-top: 175px;
-        gap: 100px;
-        flex-direction: column;
+        gap: 75px;
+        flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        margin-bottom: 120px;
+        /* margin-bottom: 150px; */
     }
 
     .form{

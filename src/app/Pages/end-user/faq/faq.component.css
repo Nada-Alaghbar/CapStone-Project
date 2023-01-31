@@ -49,9 +49,9 @@ h1{
       .faq{
         margin-top: 220px;
           display: flex;
-          flex-direction: column;
+          flex-direction: column-reverse;
           gap: 50px;
-          margin-bottom: 135px;
+          /* margin-bottom: 135px; */
       }
   
     .p{

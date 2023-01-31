@@ -181,12 +181,6 @@ p{
   height: 35vh;
 }
 .none{
-  width: 70vw;
-  /* border: 1px solid red; */
-}
-
-.bigLogo{
-  max-height: 75px;
   max-width: 75px;
 }
 

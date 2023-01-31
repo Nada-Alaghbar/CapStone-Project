@@ -19,7 +19,7 @@ h3{
 .form{
     /* background-color: white; */
     border-radius: 7px;
-    width: 700px;
+    width: 50vw;
     height: 60vh;
     display: flex;
     justify-content: center;
@@ -69,26 +69,8 @@ button{
     border-radius: 7px;
 }
 
-@media screen and (max-width: 750px){
 
-    .title{
-        width: 500px;  
-    }
-.form{
-    width: 500px;
-    height: 55vh;
-    /* gap: 10px; */
-  }
-
-.field{
-    justify-content: space-between;
-    gap: 50px;
-    }
-    input{
-        width: 150px;
-    }
-}
-@media screen and (max-width: 625px){
+@media screen and (max-width: 1150px){
     .title{
         flex-direction: column;
         width: 75vw;
@@ -96,16 +78,32 @@ button{
         align-items: center;
     }
 .form{
-    width: 400px;
-    /* gap: 10px; */
+    width: 75vw;
+    height: 40vh;
+  }
+
+.field{
+    justify-content: space-between;
+    gap: 45px;
+    }
+
+}
+@media screen and (max-width: 750px){
+
+    .title{
+        width: 500px;  
+    }
+.form{
+    width: 50vw;
+    height: 40vh;
   }
 
 .field{
     justify-content: space-between;
     gap: 30px;
     }
-
+    
     input{
-        width: 150px;
+        width: 120px;
     }
 }

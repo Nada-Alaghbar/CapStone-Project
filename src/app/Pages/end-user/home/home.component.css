@@ -1,6 +1,6 @@
 .landing{
     display: flex;
-    padding: 50px;
+    /* padding: 30px; */
     justify-content: center;
     align-items: center;
     height: 500px;
@@ -23,7 +23,7 @@ h1{
 
 }
 
-.sectors{
+/* .sectors{
     display: flex;
     flex-direction: column;
     margin: 50px;
@@ -32,7 +32,7 @@ h1{
     width: 200px;
     gap: 20px;
     
-}
+} */
 
 @media screen and (max-width: 1100px){
 
@@ -48,7 +48,31 @@ h1{
     
   }
   
-  @media screen and (max-width: 860px){
+  
+  @media screen and (max-width: 995px){
+
+    .landing{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+  .p{
+      width: 50vw; 
+  }
+
+  img{
+    max-width: 50vw;
+}
+
+
+  }
+  
+  
+  
+  /* @media screen and (max-width: 860px){
+
+
     .landing{
         display: flex;
         flex-direction: column;
@@ -62,4 +86,4 @@ h1{
   img{
     max-width: 35vw;
 }
-  }
+  } */

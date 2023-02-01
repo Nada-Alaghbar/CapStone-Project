@@ -1,0 +1,8 @@
+For admin login please go to one of these paths:
+/admin or /login
+
+Email : nada@gmail.com
+Password : 123456789
+
+do not forget to log out after you finish up.
+Thank you!
